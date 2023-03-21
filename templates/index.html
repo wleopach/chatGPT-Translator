@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT Translator</title>
+    <link
+            rel="shortcut icon"
+            href="{{ url_for('static', path='/dog.png') }}"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', path='/main.css') }}"/>
+</head>
+<body>
+
+
+
+<img src="{{ url_for('static', path='/re.jpg') }}" class="image"/>
+<h3>English-French chatgpt-3 Translator</h3>
+<form action="/chat" method="post">
+    <input type="text" name="animal" placeholder="Enter the text you want to translate" autocomplete="off" required/>
+    <input type="submit" value="Generate translation"/>
+</form>
+{% if result2 %}
+<div class="result">{{ result2 }}</div>
+{% endif %}
+
+
+<!--<img src="{{ url_for('static', path='/dog.png') }}" class="icon"/>-->
+<!--<h3>Name my pet</h3>-->
+<!--<form action="/" method="post">-->
+<!--    <input type="text" name="animal" placeholder="Enter your request" autocomplete="off" required/>-->
+<!--    <input type="submit" value="Generate response"/>-->
+<!--</form>-->
+<!--{% if result %}-->
+<!--<div class="result">{{ result }}</div>-->
+<!--{% endif %}-->
+</body>
+</html>
+
